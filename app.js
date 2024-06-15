@@ -8,11 +8,6 @@ async function fech(city) {
 
         let c = await a.json()
 
-       
-        
-         
-        
-
         document.querySelector('#location').innerHTML = c.location.name
 
         document.querySelector('#degree').innerHTML = c.current.temp_c + `&degC`
@@ -27,13 +22,7 @@ async function fech(city) {
 
         document.querySelector('#condition').innerHTML = c.current.condition.text
 
-
-
         setInterval(() => {
-
-
-    
-
 
             document.querySelector('#day').innerHTML = c.location.
             localtime
@@ -47,7 +36,6 @@ async function fech(city) {
     }
 
 }
-
 
 document.querySelector('button').addEventListener('click',()=>{
    let a =  document.querySelector('input').value
