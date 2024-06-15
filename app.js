@@ -7,6 +7,9 @@ async function fech(city) {
         let a = await fetch('http://api.weatherapi.com/v1/current.json?key=1fdad4d08748409dbbe64954241506&q=' + city + ' &aqi=no')
 
         let c = await a.json()
+
+       
+        
          
         
 
@@ -29,10 +32,11 @@ async function fech(city) {
         setInterval(() => {
 
 
-            let date = new Date()
+    
 
 
-            document.querySelector('#day').innerHTML = date.toLocaleTimeString()
+            document.querySelector('#day').innerHTML = c.location.
+            localtime
         }, 1000)
 
 
